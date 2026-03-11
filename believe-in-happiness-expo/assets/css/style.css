@@ -142,8 +142,8 @@ a:hover {
 .hero-bg {
   position: absolute;
   inset: 0;
-  background: url('../images/hero-banner.jpg') center/cover no-repeat;
-  opacity: 0.35;
+  background: url('../images/banner-main.png') center/cover no-repeat;
+  opacity: 0.55;
 }
 
 .hero-content {
@@ -178,6 +178,22 @@ a:hover {
   font-size: 0.9rem;
   margin-bottom: 20px;
   letter-spacing: 1px;
+}
+
+/* 首頁全幅橫幅圖片 */
+.hero-banner {
+  width: 100%;
+  line-height: 0;
+}
+
+.hero-banner-img {
+  width: 100%;
+  height: auto;
+  display: block;
+  max-height: 600px;
+  object-fit: contain;
+  object-position: center;
+  background: var(--primary-dark);
 }
 
 /* 子頁面頂部橫幅 */
@@ -621,4 +637,26 @@ main {
   .page-content {
     padding: 40px 16px;
   }
+}
+
+/* ===========================
+   YouTube 響應式嵌入
+   =========================== */
+.yt-wrap {
+  position: relative;
+  padding-top: 56.25%;
+  /* 16:9 */
+  margin-top: 24px;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: var(--shadow);
+}
+
+.yt-wrap iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: none;
 }

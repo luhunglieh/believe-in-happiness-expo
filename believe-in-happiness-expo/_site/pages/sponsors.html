@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>贊助單位 | 相信幸福博覽會</title>
-  <meta name="description" content="感謝所有支持相信幸福博覽會的企業與團體">
+  <meta name="description" content="國際扶輪3522地區 25-26年度服務計畫">
   
   <!-- Open Graph（LINE/FB 分享預覽） -->
   <meta property="og:title" content="贊助單位">
@@ -17,10 +17,18 @@
 
   <nav class="navbar">
   <a href="/believe-in-happiness-expo/" class="nav-logo">
-    <img src="/believe-in-happiness-expo/assets/images/logo.jpg" alt="相信幸福博覽會">
+    <img src="/believe-in-happiness-expo/assets/images/logo.png" alt="相信幸福博覽會">
     <span>相信幸福博覽會</span>
   </a>
-  <ul class="nav-links">
+
+  <!-- 漢堡按鈕（行動裝置） -->
+  <button class="hamburger" id="hamburger" aria-label="開啟選單" aria-expanded="false">
+    <span></span>
+    <span></span>
+    <span></span>
+  </button>
+
+  <ul class="nav-links" id="nav-links">
     <li><a href="/believe-in-happiness-expo/">首頁</a></li>
     <li><a href="/believe-in-happiness-expo/pages/emotion-expo">情緒教育展</a></li>
     <li><a href="/believe-in-happiness-expo/pages/happiness-fair">幸福園遊會</a></li>
@@ -29,35 +37,128 @@
   </ul>
 </nav>
 
+<script>
+  const hamburger = document.getElementById('hamburger');
+  const navLinks = document.getElementById('nav-links');
+
+  hamburger.addEventListener('click', () => {
+    const isOpen = navLinks.classList.toggle('open');
+    hamburger.classList.toggle('open', isOpen);
+    hamburger.setAttribute('aria-expanded', isOpen);
+  });
+
+  // 點連結後自動關閉選單
+  navLinks.querySelectorAll('a').forEach(link => {
+    link.addEventListener('click', () => {
+      navLinks.classList.remove('open');
+      hamburger.classList.remove('open');
+      hamburger.setAttribute('aria-expanded', false);
+    });
+  });
+</script>
 
   <main>
-    <section class="page-hero">
-  <img src="/believe-in-happiness-expo/assets/images/sponsors-banner.jpg" alt="贊助單位">
+    <section class="page-hero" style="background: linear-gradient(135deg, #4a7c59, #2c5f3a);">
+  <h1>🏆 贊助企業、社團與社友</h1>
+  <p>感謝各單位的大力支持與贊助</p>
 </section>
 
-<section class="page-content">
-  <h1>贊助單位</h1>
-  <p>感謝以下單位的大力支持，讓「相信幸福博覽會」得以順利舉行，共同推動社會心理健康促進。</p>
+<div class="page-content">
 
-  <div class="sponsor-category">
-    <h2>主辦單位</h2>
-    <div class="sponsor-grid">
-      <div class="sponsor-item">國際扶輪3522地區</div>
-      <div class="sponsor-item">台北市同德扶輪社</div>
-      <div class="sponsor-item">台北市東區扶輪社</div>
-      <div class="sponsor-item">台北市珍愛扶輪社</div>
+  <!-- 情緒教育展 -->
+  <div class="content-section">
+    <h2>🌿 情緒教育展</h2>
+    <h3>主辦社</h3>
+    <div class="tag-list">
+      <span class="tag">土林</span><span class="tag">東誠</span><span class="tag">敦化</span>
+      <span class="tag">安和</span><span class="tag">同德</span><span class="tag">同慶</span>
+      <span class="tag">美仁</span><span class="tag">忠孝</span><span class="tag">忠信</span>
+    </div>
+    <h3 style="margin-top:18px;">協辦社</h3>
+    <div class="tag-list">
+      <span class="tag">東區</span><span class="tag">仁愛</span><span class="tag">大仁</span>
+      <span class="tag">東曜</span><span class="tag">東北</span><span class="tag">東方</span>
+      <span class="tag">東豐</span><span class="tag">文林</span><span class="tag">新中區</span>
+      <span class="tag">丰芸</span><span class="tag">忠誠</span><span class="tag">忠美</span>
+      <span class="tag">汐止</span><span class="tag">東湖</span><span class="tag">東林</span>
+      <span class="tag">大左岸</span>
     </div>
   </div>
 
-  <div class="sponsor-category">
-    <h2>協辦單位</h2>
-    <div class="sponsor-grid">
-      <div class="sponsor-item">華山1914文化園區</div>
-      <div class="sponsor-item">各界支持企業</div>
+  <!-- 幸福園遊會 -->
+  <div class="content-section">
+    <h2>🎪 幸福園遊會</h2>
+    <h3>主辦社</h3>
+    <div class="tag-list">
+      <span class="tag">東區</span><span class="tag">松智</span><span class="tag">土林</span>
+      <span class="tag">敦化</span><span class="tag">安和</span><span class="tag">同德</span>
+      <span class="tag">同慶</span><span class="tag">美仁</span><span class="tag">忠信</span>
+      <span class="tag">草山</span><span class="tag">同領</span><span class="tag">白金</span>
+      <span class="tag">環球</span><span class="tag">天際</span>
+    </div>
+    <h3 style="margin-top:18px;">協辦社</h3>
+    <div class="tag-list">
+      <span class="tag">仁愛</span><span class="tag">大仁</span><span class="tag">滬尾</span>
+      <span class="tag">華新</span><span class="tag">松仁</span><span class="tag">東曜</span>
+      <span class="tag">東南</span><span class="tag">東北</span><span class="tag">東豐</span>
+      <span class="tag">東義</span><span class="tag">文林</span><span class="tag">新中區</span>
+      <span class="tag">亞聯</span><span class="tag">大屯山</span><span class="tag">忠孝</span>
+      <span class="tag">北投</span><span class="tag">八芝蘭</span><span class="tag">元宇宙</span>
+      <span class="tag">汐止</span><span class="tag">東聖</span>
     </div>
   </div>
-</section>
 
+  <!-- 反毒街舞 -->
+  <div class="content-section">
+    <h2>💃 反毒街舞</h2>
+    <h3>主辦社</h3>
+    <div class="tag-list">
+      <span class="tag">土林</span><span class="tag">台北101</span><span class="tag">珍愛</span>
+      <span class="tag">東義</span><span class="tag">敦化</span><span class="tag">安和</span>
+      <span class="tag">同德</span><span class="tag">同慶</span><span class="tag">美仁</span>
+      <span class="tag">忠信</span><span class="tag">東湖</span>
+    </div>
+    <h3 style="margin-top:18px;">協辦社</h3>
+    <div class="tag-list">
+      <span class="tag">東區</span><span class="tag">仁愛</span><span class="tag">大仁</span>
+      <span class="tag">華新</span><span class="tag">松智</span><span class="tag">東曜</span>
+      <span class="tag">雲端</span><span class="tag">海洋</span><span class="tag">大金</span>
+      <span class="tag">仙饌</span><span class="tag">若熙</span><span class="tag">金生麗水</span>
+      <span class="tag">ｅ東網路</span><span class="tag">東北</span><span class="tag">東欣</span>
+      <span class="tag">東美</span><span class="tag">七星</span><span class="tag">文林</span>
+      <span class="tag">新中區</span><span class="tag">象山</span><span class="tag">忠孝</span>
+      <span class="tag">忠善</span><span class="tag">汐止</span><span class="tag">內湖</span>
+      <span class="tag">文湖</span><span class="tag">大湖</span><span class="tag">天運</span>
+      <span class="tag">東林</span><span class="tag">東聖</span>
+    </div>
+  </div>
+
+  <!-- 扶輪社友贊助 -->
+  <div class="content-section">
+    <h2>👥 扶輪社友贊助</h2>
+    <h3>贊助 5 萬元</h3>
+    <div class="tag-list">
+      <span class="tag">同德社-PP Matsu</span>
+    </div>
+    <h3 style="margin-top:18px;">贊助 3 萬元</h3>
+    <div class="tag-list">
+      <span class="tag">同慶社-PP Kito</span>
+      <span class="tag">內湖社-PP Eric</span>
+      <span class="tag">同德社-AG Vincent</span>
+    </div>
+    <h3 style="margin-top:18px;">其他贊助社友</h3>
+    <div class="tag-list">
+      <span class="tag">東區社-PP Philip</span>
+      <span class="tag">東昇社-VDS PP Ken</span>
+      <span class="tag">同慶社-CS Celia</span>
+      <span class="tag">同慶社-PP Smile</span>
+      <span class="tag">忠信社-CP Eric</span>
+      <span class="tag">忠信社-PP Ivy</span>
+      <span class="tag">同慶社-PP Eric</span>
+    </div>
+  </div>
+
+</div>
   </main>
 
   <footer class="site-footer">
