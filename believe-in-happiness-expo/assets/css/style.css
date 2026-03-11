@@ -4,20 +4,24 @@
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700&display=swap');
 
 :root {
-  --primary: #4a7c59;
-  --primary-light: #6aad7d;
-  --primary-dark: #2c5f3a;
+  --primary: #1e90d6;
+  --primary-light: #55b3f5;
+  --primary-dark: #0d65a8;
   --accent: #f5a623;
-  --accent2: #e8f5e9;
-  --text: #222222;
-  --text-light: #555555;
-  --bg: #f9f9f6;
+  --accent2: #e8f4fd;
+  --text: #1a1a2e;
+  --text-light: #555577;
+  --bg: #f5faff;
   --white: #ffffff;
-  --shadow: 0 4px 20px rgba(0,0,0,0.10);
+  --shadow: 0 4px 20px rgba(0, 0, 0, 0.10);
   --radius: 14px;
 }
 
-* { box-sizing: border-box; margin: 0; padding: 0; }
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
 
 body {
   font-family: 'Noto Sans TC', 'PingFang TC', 'Microsoft JhengHei', sans-serif;
@@ -26,11 +30,17 @@ body {
   line-height: 1.8;
 }
 
-a { color: var(--primary); text-decoration: none; }
-a:hover { color: var(--primary-dark); }
+a {
+  color: var(--primary);
+  text-decoration: none;
+}
+
+a:hover {
+  color: var(--primary-dark);
+}
 
 /* ===========================
-   導覽列
+   導覽列（桌機）
    =========================== */
 .navbar {
   display: flex;
@@ -39,7 +49,7 @@ a:hover { color: var(--primary-dark); }
   padding: 0 5%;
   height: 68px;
   background: var(--white);
-  box-shadow: 0 2px 12px rgba(0,0,0,0.08);
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
   position: sticky;
   top: 0;
   z-index: 1000;
@@ -55,7 +65,10 @@ a:hover { color: var(--primary-dark); }
   text-decoration: none;
 }
 
-.nav-logo img { height: 40px; border-radius: 6px; }
+.nav-logo img {
+  height: 40px;
+  border-radius: 6px;
+}
 
 .nav-links {
   display: flex;
@@ -69,12 +82,48 @@ a:hover { color: var(--primary-dark); }
   font-size: 0.95rem;
   color: var(--text);
   transition: background 0.2s, color 0.2s;
+  white-space: nowrap;
 }
 
 .nav-links a:hover,
 .nav-links a.active {
   background: var(--primary);
   color: var(--white);
+}
+
+/* 漢堡按鈕 — 桌機隱藏 */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  gap: 5px;
+  cursor: pointer;
+  padding: 6px;
+  background: none;
+  border: none;
+  z-index: 1100;
+}
+
+.hamburger span {
+  display: block;
+  width: 26px;
+  height: 3px;
+  background: var(--primary-dark);
+  border-radius: 3px;
+  transition: transform 0.3s, opacity 0.3s;
+}
+
+/* 漢堡開啟時的 X 動畫 */
+.hamburger.open span:nth-child(1) {
+  transform: translateY(8px) rotate(45deg);
+}
+
+.hamburger.open span:nth-child(2) {
+  opacity: 0;
+}
+
+.hamburger.open span:nth-child(3) {
+  transform: translateY(-8px) rotate(-45deg);
 }
 
 /* ===========================
@@ -110,7 +159,7 @@ a:hover { color: var(--primary-dark); }
   font-weight: 700;
   letter-spacing: 4px;
   margin-bottom: 18px;
-  text-shadow: 0 2px 8px rgba(0,0,0,0.4);
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.4);
 }
 
 .hero-content p {
@@ -155,7 +204,9 @@ a:hover { color: var(--primary-dark); }
 /* ===========================
    版面容器
    =========================== */
-main { min-height: 70vh; }
+main {
+  min-height: 70vh;
+}
 
 .container {
   max-width: 960px;
@@ -216,13 +267,16 @@ main { min-height: 70vh; }
   border-radius: 3px;
 }
 
-.info-block p, .info-block li {
+.info-block p,
+.info-block li {
   font-size: 1rem;
   color: var(--text-light);
   margin-bottom: 8px;
 }
 
-.info-block ul { padding-left: 20px; }
+.info-block ul {
+  padding-left: 20px;
+}
 
 /* ===========================
    三大活動卡片 (首頁)
@@ -249,7 +303,7 @@ main { min-height: 70vh; }
 
 .activity-card:hover {
   transform: translateY(-6px);
-  box-shadow: 0 12px 32px rgba(0,0,0,0.14);
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.14);
 }
 
 .activity-card-img {
@@ -300,7 +354,10 @@ main { min-height: 70vh; }
   transition: background 0.2s;
 }
 
-.card-btn:hover { background: var(--primary-dark); color: var(--white); }
+.card-btn:hover {
+  background: var(--primary-dark);
+  color: var(--white);
+}
 
 /* ===========================
    贊助板塊
@@ -315,8 +372,16 @@ main { min-height: 70vh; }
   margin: 0 auto;
 }
 
-.sponsors-cta h2 { font-size: 1.6rem; margin-bottom: 14px; }
-.sponsors-cta p { opacity: 0.9; margin-bottom: 24px; font-size: 1rem; }
+.sponsors-cta h2 {
+  font-size: 1.6rem;
+  margin-bottom: 14px;
+}
+
+.sponsors-cta p {
+  opacity: 0.9;
+  margin-bottom: 24px;
+  font-size: 1rem;
+}
 
 .btn-white {
   display: inline-block;
@@ -329,7 +394,10 @@ main { min-height: 70vh; }
   transition: transform 0.2s;
 }
 
-.btn-white:hover { transform: scale(1.04); color: var(--primary-dark); }
+.btn-white:hover {
+  transform: scale(1.04);
+  color: var(--primary-dark);
+}
 
 /* ===========================
    子頁面通用
@@ -378,7 +446,7 @@ main { min-height: 70vh; }
 }
 
 /* ===========================
-   標籤列表 (贊助頁)
+   標籤列表 / 攤位 / 演出
    =========================== */
 .tag-list {
   display: flex;
@@ -396,7 +464,6 @@ main { min-height: 70vh; }
   font-weight: 500;
 }
 
-/* 統計數字 */
 .stats-row {
   display: flex;
   justify-content: center;
@@ -421,7 +488,6 @@ main { min-height: 70vh; }
   color: var(--text-light);
 }
 
-/* 時程表 */
 .schedule-table {
   width: 100%;
   border-collapse: collapse;
@@ -442,9 +508,10 @@ main { min-height: 70vh; }
   color: var(--text-light);
 }
 
-.schedule-table tr:nth-child(even) td { background: var(--accent2); }
+.schedule-table tr:nth-child(even) td {
+  background: var(--accent2);
+}
 
-/* 攤位 emoji 列表 */
 .booth-list {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
@@ -460,7 +527,6 @@ main { min-height: 70vh; }
   color: var(--text);
 }
 
-/* 演出列表 */
 .performance-list {
   display: flex;
   flex-wrap: wrap;
@@ -482,25 +548,77 @@ main { min-height: 70vh; }
    =========================== */
 .site-footer {
   background: var(--primary-dark);
-  color: rgba(255,255,255,0.85);
+  color: rgba(255, 255, 255, 0.85);
   text-align: center;
   padding: 40px 20px;
   font-size: 0.9rem;
   line-height: 2;
 }
 
-.site-footer a { color: rgba(255,255,255,0.75); }
-.site-footer a:hover { color: white; }
+.site-footer a {
+  color: rgba(255, 255, 255, 0.75);
+}
+
+.site-footer a:hover {
+  color: white;
+}
 
 /* ===========================
-   RWD
+   行動裝置 RWD — 漢堡選單
    =========================== */
-@media (max-width: 720px) {
-  .hero-content h1 { font-size: 2rem; }
-  .navbar { flex-wrap: wrap; height: auto; padding: 12px 5%; gap: 10px; }
-  .nav-links { gap: 4px; flex-wrap: wrap; }
-  .nav-links a { font-size: 0.85rem; padding: 6px 10px; }
-  .info-block { padding: 28px 20px; }
-  .content-section { padding: 24px 18px; }
-  .activity-grid { grid-template-columns: 1fr; }
+@media (max-width: 768px) {
+  .hero-content h1 {
+    font-size: 2rem;
+  }
+
+  /* 顯示漢堡按鈕 */
+  .hamburger {
+    display: flex;
+  }
+
+  /* 隱藏桌機導覽列，改為下拉抽屜 */
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    position: fixed;
+    top: 68px;
+    left: 0;
+    right: 0;
+    background: var(--white);
+    padding: 16px 20px 24px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+    z-index: 999;
+    gap: 4px;
+  }
+
+  .nav-links.open {
+    display: flex;
+  }
+
+  .nav-links li {
+    width: 100%;
+  }
+
+  .nav-links a {
+    display: block;
+    padding: 12px 18px;
+    border-radius: 10px;
+    font-size: 1rem;
+  }
+
+  .info-block {
+    padding: 28px 20px;
+  }
+
+  .content-section {
+    padding: 24px 18px;
+  }
+
+  .activity-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .page-content {
+    padding: 40px 16px;
+  }
 }
