@@ -3,31 +3,78 @@ layout: default
 title: 首頁
 ---
 
+<!-- 英雄橫幅 -->
 <section class="hero">
-  <img src="{{ '/assets/images/hero-banner.jpg' | relative_url }}" alt="相信幸福博覽會">
+  <div class="hero-bg"></div>
+  <div class="hero-content">
+    <span class="hero-badge">國際扶輪3522地區 25-26年度服務計畫</span>
+    <h1>相信幸福博覽會</h1>
+    <p>
+      首創以心理健康為軸心<br>
+      舉辦開放予一般民眾之推廣型服務計畫<br>
+      誠摯邀請各社參與推廣與支持<br>
+      主協辦贊助與移動例會<br>
+      共同推動社會心理健康促進<br>
+      <strong>幸福在行動的那一刻</strong>
+    </p>
+  </div>
 </section>
 
-<section class="intro">
-  <h2>相信幸福博覽會</h2>
-  <p>國際扶輪3522地區25-26年度<br>
-  首創以心理健康為軸心<br>
-  舉辦開放予一般民眾之推廣型服務計畫</p>
+<!-- 活動資訊 -->
+<section class="section" style="background: white;">
+  <div class="info-block">
+    <h2>相信幸福博覽會資訊</h2>
+    <ul>
+      <li>🏛️ <strong>主辦單位：</strong>國際扶輪3522地區</li>
+      <li>📍 <strong>地點：</strong>🔹 華山1914文化園區</li>
+      <li>🗓️ <strong>時間：</strong>🔹 2025年10月9日～12日</li>
+      <li>🎯 <strong>主軸活動：</strong>情緒教育展（同德社）、幸福園遊會＋舞台（東區社）、反毒街舞比賽（珍愛社）</li>
+      <li>👥 <strong>四天預期萬人參與</strong>，活動分為3個獨立且協同的服務計劃</li>
+    </ul>
+    <p style="margin-top: 16px; color: #4a7c59; font-weight: 600;">扶輪家庭日・用幸福與喜悅共創社會價值，歡迎踴躍支持！</p>
+  </div>
 </section>
 
-<section class="event-info">
-  <h2>活動資訊</h2>
-  <ul>
-    <li>主辦單位：國際扶輪3522地區</li>
-    <li>地點：華山1914文化園區</li>
-    <li>時間：2025年10月9～12日</li>
-  </ul>
+<!-- 三大主軸活動 -->
+<section class="section">
+  <h2 class="section-title">三大主軸活動</h2>
+  <div class="activity-grid">
+
+    <a class="activity-card" href="{{ '/pages/emotion-expo' | relative_url }}">
+      <div class="activity-card-img">🌿</div>
+      <div class="activity-card-body">
+        <h3>情緒教育展</h3>
+        <p>結合藝術與互動式自我探索設計，提升民眾自身幸福感意識，促進個人身心健康。</p>
+        <span class="card-btn">前往情緒教育展 →</span>
+      </div>
+    </a>
+
+    <a class="activity-card" href="{{ '/pages/happiness-fair' | relative_url }}">
+      <div class="activity-card-img">🎪</div>
+      <div class="activity-card-body">
+        <h3>幸福園遊會</h3>
+        <p>10/10～12免費入場，使用園遊券消費，享受美食、表演與抽獎，幸福滿載！</p>
+        <span class="card-btn">前往幸福園遊會 →</span>
+      </div>
+    </a>
+
+    <a class="activity-card" href="{{ '/pages/dance-contest' | relative_url }}">
+      <div class="activity-card-img">💃</div>
+      <div class="activity-card-body">
+        <h3>反毒街舞賽</h3>
+        <p>累計超過1,000位青少年參與，150間學校、近百支隊伍參賽，觸及社群觀看數突破30萬。</p>
+        <span class="card-btn">前往反毒街舞賽 →</span>
+      </div>
+    </a>
+
+  </div>
 </section>
 
-<section class="activities">
-  <h2>三大主軸活動</h2>
-  <div class="activity-links">
-    <a href="{{ '/pages/emotion-expo' | relative_url }}">前往情緒教育展</a>
-    <a href="{{ '/pages/happiness-fair' | relative_url }}">前往幸福園遊會</a>
-    <a href="{{ '/pages/dance-contest' | relative_url }}">前往反毒街舞賽</a>
+<!-- 贊助單位呼籲 -->
+<section class="section" style="background: white;">
+  <div class="sponsors-cta">
+    <h2>服務計畫贊助社友、廠商</h2>
+    <p>誠摯邀請企業與社友共同贊助，攜手推動社會心理健康促進</p>
+    <a href="{{ '/pages/sponsors' | relative_url }}" class="btn-white">詳細請看 →</a>
   </div>
 </section>
