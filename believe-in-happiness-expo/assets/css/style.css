@@ -563,20 +563,30 @@ main {
    頁腳
    =========================== */
 .site-footer {
-  background: var(--primary-dark);
-  color: rgba(255, 255, 255, 0.85);
+  background: var(--white);
+  color: var(--text-light);
   text-align: center;
-  padding: 40px 20px;
+  padding: 50px 20px;
   font-size: 0.9rem;
   line-height: 2;
+  border-top: 1px solid #eee;
+}
+
+.footer-logo {
+  max-height: 80px;
+  width: auto;
+  margin-bottom: 25px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .site-footer a {
-  color: rgba(255, 255, 255, 0.75);
+  color: var(--primary);
 }
 
 .site-footer a:hover {
-  color: white;
+  color: var(--primary-dark);
 }
 
 /* ===========================
