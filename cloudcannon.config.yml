@@ -1,0 +1,30 @@
+paths:
+  static: ''
+  uploads: uploads
+timezone: Asia/Taipei
+markdown:
+  engine: kramdown
+  options:
+    heading_ids: false
+    gfm: false
+    breaks: false
+    typographer: false
+    attributes: true
+    attribute_elements:
+      inline: right
+      block: below
+      tr: none
+      td: none
+      li: right-of-prefix
+    treat_indentation_as_code: true
+_snippets_imports:
+  jekyll: true
+collections_config:
+  believe_in_happiness_expo:
+    path: believe-in-happiness-expo
+    icon: remove_shopping_cart
+    disable_url: true
+  believe_in_happiness_expo_pages:
+    path: believe-in-happiness-expo/pages
+    icon: business_messages
+    disable_url: true
