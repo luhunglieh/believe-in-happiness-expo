@@ -9,3 +9,7 @@ show_excerpts: false
 
 # 主題
 theme: jekyll-theme-slate
+
+# 外掛
+plugins:
+  - jekyll-sitemap
