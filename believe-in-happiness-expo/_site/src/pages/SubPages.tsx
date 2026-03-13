@@ -50,6 +50,6 @@ export const Dance = () => (
   <SubPage 
     title="反毒街舞賽" 
     content="由珍愛社主辦。街舞不僅是運動，更是一種自我表達。我們透過高能量的街舞比賽，吸引年輕族群參與，並在過程中傳遞反毒意識，鼓勵青少年追求健康、正向的休閒生活。" 
-    image="https://picsum.photos/seed/dance-detail/1200/600"
+    image="/assets/images/3-banner01.jpg"
   />
 );
