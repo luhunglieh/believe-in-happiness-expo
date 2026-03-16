@@ -1,14 +1,38 @@
-# Run and deploy your Jekyll site
+# 相信幸福博覽會 - Believe in Happiness Expo
 
-This contains everything you need to run your site locally using Jekyll.
+國際扶輪 3522 地區 25-26 年度服務計畫。首創以心理健康為軸心，舉辦開放予一般民眾之推廣型服務計畫。
 
-## Run Locally
+## 專案簡介
+本網站在於推廣「相信幸福博覽會」活動，透過三大獨立且協同的服務計畫，結合藝術、美食、運動與公益，共創社會價值。
 
-**Prerequisites:** Ruby & Bundler
+### 活動四大主軸
+1. **🌿 情緒教育展**：結合藝術與互動式自我探索設計，提升幸福感意識，促進身心健康。
+2. **🎪 幸福園遊會**：包含美食攤位、舞台演藝、抽獎活動，打造扶輪家庭日。
+3. **💃 反毒街舞賽**：累計萬人參與的青少年活動，推廣健康無毒生活。
+4. **🏆 贊助單位**：感謝企業與社友攜手推動社會心理健康。
 
-1. Install dependencies:
-   `bundle install`
-2. Run the site:
-   `bundle exec jekyll serve`
+## 技術架構
+本網站採用 **Jekyll** 靜態網站產生器建置，並整合以下功能：
+- **Jekyll Sitemap Plugin**：自動產生網站地圖，優化 SEO。
+- **GitHub Pages**：自動化部署與託管。
+- **範本中央化**：透過 `_config.yml` 集中管理全站元數據 (Metadata) 與選單。
 
-The site will be available at `http://127.0.0.1:4000/believe-in-happiness-expo/`
+## 本機開發指引
+
+**前置作業：** 需安裝 Ruby 與 Bundler。
+
+1. **安裝環境與套件：**
+   ```bash
+   bundle install
+   ```
+
+2. **啟動本機預覽伺服器：**
+   ```bash
+   bundle exec jekyll serve
+   ```
+
+3. **存取連結：**
+   伺服器啟動後，可於瀏覽器開啟 [http://127.0.0.1:4000/believe-in-happiness-expo/](http://127.0.0.1:4000/believe-in-happiness-expo/) 查看。
+
+## 版權宣告
+© 國際扶輪3522地區 版權所有。端詳互動資訊網站建置。
