@@ -1,8 +1,30 @@
 title: 相信幸福博覽會
-description: 國際扶輪3522地區 25-26年度服務計畫
+description: 國際扶輪3522地區 25-26年度服務計畫。扶輪家庭日・用幸福與喜悅共創社會價值。
 baseurl: "/believe-in-happiness-expo"
 url: "https://luhunglieh.github.io"
 lang: zh-TW
+
+# 活動詳細資訊
+organizer: "國際扶輪3522地區"
+term: "25-26年度服務計畫"
+location:
+  name: "華山1914文化創意產業園區"
+  address: "台北市中正區八德路一段1號"
+  halls: "中4A館、中4B館、中3前廣場"
+dates: "2025年10月9日～12日"
+
+# 導覽選單
+navigation:
+  - title: "首頁"
+    url: "/"
+  - title: "情緒教育展"
+    url: "/pages/emotion-expo"
+  - title: "幸福園遊會"
+    url: "/pages/happiness-fair"
+  - title: "反毒街舞賽"
+    url: "/pages/dance-contest"
+  - title: "贊助單位"
+    url: "/pages/sponsors"
 
 # 關閉不需要的功能
 show_excerpts: false
