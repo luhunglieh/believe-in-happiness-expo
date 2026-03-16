@@ -1,8 +1,24 @@
+# ==========================================
+# 相信幸福博覽會 Jekyll 設定檔
+# 國際扶輪3522地區 25-26年度服務計畫
+# 建立日期：2026 03
+# ==========================================
+
+# --- 基本資訊 ---
 title: 相信幸福博覽會
-description: 國際扶輪3522地區 25-26年度服務計畫。扶輪家庭日・用幸福與喜悅共創社會價值。
-baseurl: "/believe-in-happiness-expo"
-url: "https://luhunglieh.github.io"
+tagline: 國際扶輪3522地區25-26年度服務計畫
+description: 首創以心理健康為軸心，舉辦開放予一般民眾之推廣型服務計畫。
+author: 國際扶輪3522地區
 lang: zh-TW
+timezone: Asia/Taipei
+
+# --- 網址設定 ---
+url: "https://luhunglieh.github.io"
+baseurl: "/believe-in-happiness-expo"
+
+# --- SEO / 社群分享 ---
+logo: /assets/images/logo.png
+og_image: /assets/images/banner-main.png
 
 # 活動詳細資訊
 organizer: "國際扶輪3522地區"
@@ -26,11 +42,20 @@ navigation:
   - title: "贊助單位"
     url: "/pages/sponsors"
 
-# 關閉不需要的功能
-show_excerpts: false
-
 # 主題
 theme: jekyll-theme-slate
+
+# 關閉不需要的功能
+show_excerpts: false
+feed:
+  disable: true
+
+# 排除不需要編譯的檔案
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - README.md
+  - .github/
 
 # 外掛
 plugins:
